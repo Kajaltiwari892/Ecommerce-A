@@ -1,0 +1,21 @@
+#product-list {
+  border: 2px solid red;
+  width: 90%;
+  margin: auto;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+
+.card {
+  border: 2px solid green;
+}
+.card img {
+  width: 100%;
+}
