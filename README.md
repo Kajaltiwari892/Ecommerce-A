@@ -40,8 +40,8 @@ Future Enhancements
 Add user authentication and a shopping cart system.
 Implement a payment gateway for checkout.
 Connect to a real backend API for production use.
-Screenshots
-(Add screenshots of your homepage, search functionality, and product details page here.)
+![image](https://github.com/user-attachments/assets/9795d527-fc68-4836-836d-e558fdfd03aa)
+
 
 Contributing
 Contributions are welcome! Feel free to fork this repository and submit a pull request with your updates.
