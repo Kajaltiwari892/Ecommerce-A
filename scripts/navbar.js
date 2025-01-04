@@ -5,7 +5,7 @@ const navbar = ` <!-- left part of the nav -->
 <!-- seacrh bar of the nav -->
     <div class="search-bar">
         <input type="text" placeholder="Find Your Favrouite Product" id="search-input">
-        <button id="search-button">Search</button>
+        <button id="search-button">Search 🔍</button>
       </div>
 <!-- right part of the nav -->
     <div class="right-nav">
@@ -14,7 +14,7 @@ const navbar = ` <!-- left part of the nav -->
             <a href="about.html">About</a>
             <a href="products.html">Products</a>
             <a href="login.html">Login</a>
-            <a href="contact.html">Contact</a>
+            <a href="signup.html">Signup</a>
         </nav>
     </div>`;
 

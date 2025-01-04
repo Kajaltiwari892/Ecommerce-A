@@ -93,6 +93,7 @@ body {
 /* Search Button */
 #search-button {
   padding: 10px 15px;
+  width: 41%;
   font-size: 1rem;
   color: white;
   background-color: #00ccff;
@@ -467,4 +468,42 @@ button:hover {
   color: #888;
 }
 
+/*  additional styling */
+ 
+ 
 
+  .glow-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        rgba(1, 12, 17, 0.1),
+        rgba(5, 6, 6, 0.572),
+        rgba(255, 255, 255, 0.1)
+    );
+    z-index: 1;
+    filter: blur(10px);
+    animation: glowing-wave 5s linear infinite;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@keyframes glowing-wave {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* glow */
+.about-container {
+    position: relative;
+    background: white;
+    z-index: 2;
+}

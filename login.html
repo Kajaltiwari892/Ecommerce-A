@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
+
 <body>
     <div class="header" id="header">
-       
+
     </div>
     <main>
-        <h1>Login</h1>
-        <form id="login-form">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </form>
+        <h1>Login Your Account Here</h1>
+        <div class="form-container">
+            <form id="login-form" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="submit" id="submit">Login</button>
+            </form>
+            <div class="Login-link">
+                <p>New user?<a href="Signup.html">Signup here</a></p>
+
+            </div>
+        </div>
+
     </main>
-    <script src="./scripts/navbar.js"></script>
+   
 </body>
+<script src="./scripts/navbar.js"></script>
+<script src="./scripts/login.js"></script>
+
+
 </html>

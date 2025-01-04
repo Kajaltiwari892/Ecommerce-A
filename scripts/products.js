@@ -2,36 +2,35 @@
 // step 2 - Fetch API to get product data
 // step 3 - Display product data in the element
 
-// step 1
-const productContainer = document.getElementById("product-list");
-let product =[]
-//step 2 
-fetch("http://localhost:3000/products",{
-    method:'GET',
-    headers:{'Content-Type':'application/json'
+const productContainer = document.getElementById("productList");
 
-    }
-}).then((response)=>{return response.json()} )
-.then((data)=>{
-    productData = data ;
-    productData.forEach((product)=>{
-        productContainer.innerHTML += `
-         <div class="card">
-                <img src="${product.image}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">${product.name}</h5>
-                    <p class="card-text">${product.password}</p>
-                    <p class="card-text">Price - ${product.price}</p>
-                    <p class="card-text">Rating - ${product.rating}</p>
-                    <p class="card-text">Discount - ${product.discount}</p>
-                    <Button class="btn-primary">Add to Cart</Button>
-                </div>
-            </div>`
-    })
+// Fetch the product data
+fetch("http://localhost:3000/products", {
+  method: 'GET',
+  headers: { 'Content-Type': 'application/json' }
 })
+  .then(response => response.json())
+  .then(data => {
+    productData = data;
+    productData.forEach(product => {
+      productContainer.innerHTML += `
+        <div class="card">
+          <img src="${product.image}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-main-text">${product.description}</p>
+            <p class="card-text">Price - ${product.price}</p>
+            <p class="card-text">Rating - ${product.rating}⭐</p>
+            <p class="card-text">Discount - ${product.discount}</p>
+            <button class="btn-primary" id="btn-primary">Add to Cart</button>
+          </div>
+        </div>`;
+    });
+  });
 
-let btn = document.documentElement.querySelector('.btn-primary')
-btn.addEventListener('click',(e)=>{
-    console.log(e.target)
-    alert('Product added to cart')
-})
+// Use event delegation for dynamically added buttons
+productContainer.addEventListener('click', function (event) {
+  if (event.target && event.target.classList.contains('btn-primary')) {
+    alert('Product added to cart');
+  }
+});
