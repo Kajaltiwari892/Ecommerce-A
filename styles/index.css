@@ -23,6 +23,7 @@ body {
   align-items: center;
   width: 100%;
   height: 80px;
+  z-index: 1000; /* Ensure it appears above other elements */
 }
 
 .left-nav img {
@@ -44,10 +45,12 @@ body {
   display: flex;
   gap: 90px;
   position: relative;
+  z-index: 1000; /* Ensure it appears above other elements */
 }
 
 .right-nav {
   margin-right: 100px;
+  z-index: 1000; /* Ensure it appears above other elements */
 }
 
 .right-nav a {
@@ -507,3 +510,62 @@ button:hover {
     background: white;
     z-index: 2;
 }
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .navbar{
+    display: none; /* Hide nav links by default */
+    flex-direction: column;
+    background-color: #eaf5ff;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .navbar.show {
+    display: flex;
+    width: 90%;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: -1100;
+  }
+
+  .search-input{
+    flex: 1;
+  }
+  .navbar {
+    display: none; 
+    flex-direction: column; 
+    background-color: #eaf5ff; 
+    position: fixed;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 20px; 
+    border: 1px solid #ccc;  
+    border-radius:8px; 
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);  */
+    box-shadow: rgb(0, 0, 0) 0px 22px 70px 4px;
+    z-index: 1000; 
+    opacity: 0.9; 
+  transition: all 0.4s ease-in-out; 
+  }
+}
+

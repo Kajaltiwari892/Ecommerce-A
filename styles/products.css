@@ -285,4 +285,16 @@ footer p {
   background-color: #e65500;
   transform: translateY(-3px);
 }
+ /* media-query for mdium screen (two column) */
+ @media (max-width: 768px) {
+  #productList{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* media-query for small screen (one column) */
 
+@media (max-width: 480px) {
+  #productList{
+    grid-template-columns: 1fr;
+  }
+}

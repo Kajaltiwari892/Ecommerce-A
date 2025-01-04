@@ -16,6 +16,16 @@ const navbar = ` <!-- left part of the nav -->
             <a href="login.html">Login</a>
             <a href="signup.html">Signup</a>
         </nav>
-    </div>`;
-
+    </div>
+    
+    <button class="hamburger" aria-label="Menu">
+    ☰
+  </button>`;
     document.getElementById('header').innerHTML = navbar
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.navbar');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show'); 
+    });
+  

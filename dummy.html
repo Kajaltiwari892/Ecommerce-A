@@ -122,3 +122,13 @@ catch (error) {
 
 
 </script>
+
+<!--  for hamburger part -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.navbar');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show'); 
+  });
+</script>
