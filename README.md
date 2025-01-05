@@ -1,7 +1,7 @@
-Description
+Description:
 This project is a dynamic and interactive e-commerce website designed to provide users with a seamless shopping experience. It includes a functional search box, responsive design, and a backend powered by a JSON server to handle product data.
 
-Features
+Features:
 Search Products: Users can search for products dynamically using the search box.
 Product Listing: Displays a catalog of products with details fetched from the JSON server.
 Interactive Design: Fully responsive and user-friendly interface for all devices.
@@ -10,7 +10,7 @@ Installation and Setup
 Clone the Repository:
 
 bash
-Copy code
+Copy code:
 git clone <your-repository-url>
 cd e-commerce-website
 Install Dependencies (if any):
@@ -43,6 +43,6 @@ Implement a payment gateway for checkout.
 Connect to a real backend API for production use.
 ![image](https://github.com/user-attachments/assets/0f2f6049-bd07-4fc0-8b25-555c25d7371d)
 
-Contributing
+Contributing:
 Contributions are welcome! Feel free to fork this repository and submit a pull request with your updates.
 
