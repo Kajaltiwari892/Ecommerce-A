@@ -1,31 +1,34 @@
 let form = document.getElementById('login-form');
-form.addEventListener('submit',function(){
+form.addEventListener('submit', function(event) {
     event.preventDefault();
+
     let email = form.email.value;
     let password = form.password.value;
-//checking email is present in database or not
-fetch('http://localhost:3000/user')
-.then((res)=>res.json())
-.then((data)=>{
-    let user = data.filter((el,i)=> el.email == email);
-    if(user.length != 0){
-        //user present
-        //check for password
-        if(user[0].password == password){
-            alert("Login Seccessful...!");
-            localStorage.setItem("loginData", JSON.stringify(user[0]))
-            window.location.href = "index.html"
-        }else{
-            alert("PAssword is wrong , Please login with right password")
-        }
-    }else{
-        //user not present
-        alert("User not registered ,Please Signup...");
-        window.location.href ="signup.html"
-    }
-})
-.catch((err)=>{
-    console.log(err);
-    alert("Something wenr wrong, Please try again later");
+
+    // Fetch the database JSON
+    fetch('https://accurate-working-longship.glitch.me/db.json')
+      .then((res) => res.json())
+      .then((data) => {
+          // Filter through the 'user' array inside the returned data object
+          let user = data.user.filter(el => el.email === email);
+          if(user.length !== 0) {
+              // User present, check for password
+              if(user[0].password === password) {
+                  alert("Login Successful...!");
+                  localStorage.setItem("loginData", JSON.stringify(user[0]));
+                  window.location.href = "index.html";
+              } else {
+                  alert("Password is wrong, please login with the correct password");
+              }
+          } else {
+              // User not present
+              alert("User not registered, please sign up...");
+              window.location.href = "signup.html";
+          }
+      })
+      .catch((err) => {
+          console.log(err);
+          alert("Something went wrong, please try again later");
+      });
 });
-});
+

@@ -12,7 +12,7 @@ main{
     align-items: center;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, #b1dff0, #d6a4f5);
+    background: linear-gradient(to right, #d9eaf0, #ebddf3);
   }
   input{
    align-items: center;
